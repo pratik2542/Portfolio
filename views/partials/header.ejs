@@ -5,8 +5,9 @@
   <meta http-equiva="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title> <%= title %> </title> 
-  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css" /> 
+  <link rel="stylesheet" href="/public/stylesheets/main.css" />
 </head> 
 <body>
   <!-- Main Nav bar -->
@@ -43,17 +44,17 @@
         </li>
 
         <li class="nav-item"> 
-            <% if (title == "Users") { %>
-                <a class="nav-link active" href="/users"> 
+            <% if (title == "Services") { %>
+                <a class="nav-link active" href="/services"> 
             <%} else { %>
-                <a class="nav-link" href="/users">
+                <a class="nav-link" href="/services">
             <% } %>
-                <i class="fas fa-user"></i> Users </a> 
+                <i class="fab fa-aws"></i> Services </a> 
             </a>
         </li>
         
         <li class="nav-item"> 
-            <% if (title == "About") { %>
+            <% if (title == "") { %>
                 <a class="nav-link active" href="/about">
             <%} else { %>
                 <a class="nav-link" href="/about">
@@ -62,7 +63,20 @@
             </a>
         </li>
 
+        <li class="nav-item"> 
+            <% if (title == "Contact Me") { %>
+                <a class="nav-link active" href="/contact">
+            <%} else { %>
+                <a class="nav-link" href="/contact">
+            <% } %>
+                <i class="far fa-address-book"></i> Contact  </a>
+            </a>
+        </li>
+
+        
       
     </ul>
     
   </nav>
+  
+  

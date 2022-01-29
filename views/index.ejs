@@ -1,6 +1,11 @@
 <% include partials/header.ejs %>
   
-  <h1><%= title %></h1>
-  <p>Welcome to <%= title %></p>
-
+    <h1><%= title %></h1>
+    <% if (title == "Home") { %>
+        <p>Welcome to <%= title %></p>
+      <%} else { %>
+        <p></p>
+      <% } %>
+    
+  
 <% include partials/footer.ejs %>  

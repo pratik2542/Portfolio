@@ -1,1 +1,1 @@
-console.log('Goes to client side');
+console.log('Testing');
