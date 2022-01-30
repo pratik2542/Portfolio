@@ -7,7 +7,7 @@ exports.projects = function(req, res, next) {
 }
 
 exports.about = function(req, res, next) {
-    res.render('index', { title: '' });
+    res.render('index', { title: 'About' });
 }
 
 exports.services = function(req, res, next) {
