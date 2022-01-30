@@ -7,25 +7,26 @@
   <title> <%= title %> </title> 
   <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css" /> 
-  <link rel="stylesheet" href="/public/stylesheets/main.css" />
+  <link rel="stylesheet" href="/stylesheets/main.css" />
 </head> 
 <body>
   <!-- Main Nav bar -->
   
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark " >
     <!-- Brand/logo --> 
-    <z>
+    <p style="margin-left : 20px;">
         <a class="navbar-brand" href="#">
-            <img src="/images/pm.png" alt="logo" style="width: 50px;" >
+            <p style="margin-right: 250px; margin-top: 2px; margin-bottom: 2px;" >
+                <img src="/images/pm6.png" alt="logo" style="width: 50px;" ></p>
         </a>
-    </z>
     
-    <ul class="navbar-nav">
+    
+    <ul class="navbar-nav space">
     
       
         <li class="nav-item"> 
             <% if (title == "Home") { %>
-                <a class="nav-link active" href="/">
+                <a class="nav-link active" href="/"> 
             <%} else { %>
                 <a class="nav-link" href="/">
             <% } %>
@@ -54,7 +55,7 @@
         </li>
         
         <li class="nav-item"> 
-            <% if (title == "") { %>
+            <% if (title == "About") { %>
                 <a class="nav-link active" href="/about">
             <%} else { %>
                 <a class="nav-link" href="/about">
@@ -76,7 +77,8 @@
         
       
     </ul>
-    
+  </p>
+
   </nav>
   
   
