@@ -1,8 +1,17 @@
+/*
+File Name - main.css
+Student Name - Pratiksinh Makwana
+Student ID - 301219863
+Date - 29-01-2022
+*/
+
+/*body*/
+
 body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   }
   
-  /* Home */
+/* Home */
   .img{
     background-image: url('/images/bg.jpg');
     background-position: center;
@@ -55,4 +64,117 @@ body {
    padding: 29px 35px;
  }
 
+ /* Project */
+
+ .project-text-head{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 17px; 
+  box-shadow: 0 0 5px 0 rgba(240,128,128);
+  padding: 15px 15px 5px 20px;
+  line-height: 25px;
  
+ }
+
+ .project-text-head2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px; 
+  box-shadow: 0 0 5px 0 rgba(240,128,128);
+  padding: 15px 15px 5px 20px;
+  line-height: 25px;
+ 
+ }
+
+ /* Services */
+
+ .service-text-head{
+   text-align: center;
+   margin-top: 20px;
+   
+ }
+
+ .services-img img{
+   margin-left: 20px;
+   height: 80px;
+   width: 70px;
+ }
+
+ .service-text{
+   margin-left:-130px;
+   
+ }
+
+ .service-text h3{
+   font-size: 30px;
+  margin-bottom: 6px;
+}
+
+ .service-text p{
+   line-height: 22px;
+   font-size: 16px;
+   margin-bottom: 8px;
+  
+} 
+
+.service-text2{
+  margin-top:-10px;
+  margin-left: 30px;
+}
+
+.service-text2 p{
+  line-height: 22px;
+  font-size: 16px;
+  margin-right:0px;
+}
+
+/* Contact */
+
+.contact{
+  background-color: #f2f2f2;
+  margin-top: 25px;
+  box-shadow: 0 0 5px 0 rgb(19, 18, 18);
+  
+}
+
+.contact-form{
+  margin-top: 1px; 
+  line-height: 25px; 
+  
+}
+
+.contact-form input{
+  width: 500px;
+  margin-bottom: 4px;
+}
+
+.contact-form label{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  margin-bottom: 2px;
+}
+
+.contact-icon{
+  margin-left: 22px;
+  margin-top: 20px;
+  
+}
+
+.contact-panel{
+  background-color: rgb(85, 85, 85); 
+  height: 50px; 
+  width: 700px; 
+  margin-left: 200px;
+  margin-top:10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  
+}
+
+.contact-panel p{
+  margin-left: 160px;
+}
+
+.contact-panel p i{
+  color: white;
+  margin-top: 10px;
+  margin-left: 70px;
+}
