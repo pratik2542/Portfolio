@@ -1,0 +1,52 @@
+<!--
+File Name - contact.ejs
+Student Name - Pratiksinh Makwana
+Student ID - 301219863
+Date - 29-01-2022
+-->
+
+    
+<% if (title == "Contact Me") { %>
+        
+    <div class="container contact">
+      <div class="row"> 
+        <div class="col-12"  >
+            <p><h2  style=" margin-left: 135px; margin-top: 20px;"><b>Contact Us</b></h2></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <img src="/images/contact1.jpg" style="width:400px; margin-left: 20px; margin-top: 5px;">
+          <div class="contact-icon"> 
+            <p><i class="fa fa-map-marker fa-2x"></i><label style="margin-left: 12px;">Ahmedabad 380058, 
+              <br>Gujarat, INDIA.</label><i class="fa fa-mobile fa-2x" style="margin-left: 105px;"></i><label style="margin-left: 12px;">+91 9173935040</label></p>
+          </div>
+        </div>
+        <div class="col-6 contact-form" >
+          
+            <label for="fn">First Name</label><br>
+            <input type="text"  name="fname" placeholder="First Name"><br>
+            <label for="ln">Last Name</label><br>
+            <input type="text"  name="lname" placeholder="Last Name"><br>
+            <label for="email">Email ID</label><br>
+            <input type="text" name="email" placeholder="Type Your Email Id here"><br>
+            
+            <label for="message">Message</label><br>
+            <textarea style="width: 500px; " name="message" placeholder="Tell Us Something..." style="height:170px"></textarea><br>
+            <button type="button" class="btn btn-dark" onclick="location.href='/'" style=" margin-top: 10px;">Submit</button>
+          
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body contact-panel">
+            <p><a href="mailto:pratikmak2542@gmail.com" target="blank"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+            </a><a href="https://www.linkedin.com/in/pratiksinh-makwana-43488a189/" target="blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+            <a href="https://github.com/pratik2542" target="blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+        <%} else { %>
+            
+        <% } %>
+        
