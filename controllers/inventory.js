@@ -12,7 +12,7 @@ const inventory = require('../models/inventory');
 const { db } = require('../models/inventory');
 let Inventory = require('../models/inventory');
 
-
+//contact list with sorting
 exports.list = function(req, res, next){
     Inventory.find((err, inventoryList)=>{
        
@@ -38,7 +38,7 @@ exports.list = function(req, res, next){
     });
 }
 
-
+//display page
 exports.displayAddPage = (req, res, next) => {
     
     let newItem = Inventory();
@@ -50,6 +50,7 @@ exports.displayAddPage = (req, res, next) => {
     })          
 }
 
+//process page
 exports.processAddPage = (req, res, next) => {
     
     let newItem = Inventory({
@@ -75,7 +76,7 @@ exports.processAddPage = (req, res, next) => {
     });
 }
 
-
+//edit
 exports.displayEditPage = (req, res, next) => {
     let id = req.params.id;
     Inventory.findById(id, (err, itemToEdit) => {
@@ -96,7 +97,7 @@ exports.displayEditPage = (req, res, next) => {
     });
 }
 
-
+//edit process page
 exports.processEditPage = (req, res, next) => {
     let id = req.params.id
     
@@ -108,7 +109,7 @@ exports.processEditPage = (req, res, next) => {
         
     });
 
-    // console.log(updatedItem);
+    
 
     Inventory.updateOne({_id: id}, updatedItem, (err) => {
         if(err)
@@ -118,13 +119,13 @@ exports.processEditPage = (req, res, next) => {
         }
         else
         {
-            // console.log(req.body);
-            // refresh the book list
+
             res.redirect('/inventory/list');
         }
     });
 }
 
+// for delete
 exports.performDelete = (req, res, next) => {
     let id = req.params.id;
 
@@ -136,7 +137,7 @@ exports.performDelete = (req, res, next) => {
         }
         else
         {
-            // refresh the book list
+            
             res.redirect('/inventory/list');
         }
     });
