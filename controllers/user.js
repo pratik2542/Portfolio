@@ -23,6 +23,8 @@ exports.pratik = function(req, res, next) {
     });
 }
 
+//error page
+
 function getErrorMessage(err) {
     console.log("--> Erro: " + err);
     let message = '';
@@ -45,7 +47,7 @@ function getErrorMessage(err) {
     return message;
   };
 
-  
+  // render register page
   module.exports.renderregister = function(req, res, next) {
     if (!req.user) {
   
@@ -63,7 +65,7 @@ function getErrorMessage(err) {
     }
   };
 
-  
+  //registration 
 module.exports.register = function(req, res, next) {
     if (!req.user) {
       console.log(req.body);
@@ -95,7 +97,7 @@ module.exports.register = function(req, res, next) {
     }
   };
 
-
+//render login page
   
   module.exports.renderlogin = function(req, res, next) {
     if (!req.user) {
@@ -110,18 +112,13 @@ module.exports.register = function(req, res, next) {
   };
 
   module.exports.ContactList = function(req, res, next) {
-    // inventory.default.find({}, null, { sort: { name: -1 } }, function (err, inventoryList) {
-    //   if (err) {
-    //       return console.error(err);
-    //   }
-      res.render('index', { title: 'ContactList' });
-  // });
-     
    
+      res.render('index', { title: 'ContactList' });
+  
 }
  
 
-
+//login
 module.exports.login = function(req, res, next){
     passport.authenticate('local', {   
       successRedirect: req.session.url || '/inventory/list',
@@ -131,7 +128,7 @@ module.exports.login = function(req, res, next){
     delete req.session.url;
   } 
 
-
+//logout 
   module.exports.logout = function(req, res, next) {
     req.logout();
     res.redirect('/');
