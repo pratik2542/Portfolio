@@ -1,3 +1,8 @@
+//Author : Pratiksinh Makwana 
+//Student Id : 301219863
+//Date : 17-02-2022
+//File : inventory.js
+
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');

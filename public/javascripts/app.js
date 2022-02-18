@@ -10,7 +10,7 @@ Date - 29-01-2022
 
 console.log('Testing My WebSite !!');
 
-
+//delete
 "use strict";
 (function () {
     function confirmDelete() {

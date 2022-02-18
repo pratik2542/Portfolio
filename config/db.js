@@ -1,3 +1,10 @@
+/*
+File Name - db.js
+Student Name - Pratiksinh Makwana
+Student ID - 301219863
+Date - 17-02-2022
+*/
+
 
 let DB_CONNECTION = "mongodb+srv://dbadmin:admin123@cluster001.ee4r7.mongodb.net/portfolioDB"
 

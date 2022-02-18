@@ -1,3 +1,11 @@
+/*
+File Name - inventory.js
+Student Name - Pratiksinh Makwana
+Student ID - 301219863
+Date - 17-02-2022
+*/
+
+
 
 const { mongo, Mongoose } = require('mongoose');
 const inventory = require('../models/inventory');
