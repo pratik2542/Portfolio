@@ -1,0 +1,38 @@
+<% include ../partials/header.ejs %>
+
+    <div class="container" style=" margin-top: 60px; margin-left: 200px;">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class=" col-3 contact" style="margin-left: -20px;">
+                <h1 style="text-align: right; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><%= title %></h1>
+                <% for(var i in messages) { %>
+                    <div class="flash"><%= messages[i] %></div>
+                <% } %>
+                <form action="/users/login" method="post" >
+                    <div class="form-group">
+                        <label><b>Username:</b></label>
+                        <input type="text" name="username" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label><b>Password:</b></label>
+                        <input type="password" name="password" class="form-control"/>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input class="btn btn-primary" type="submit" value="Login" />                    
+                    </div>
+                    <br>
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <a href="/users/register" style="text-decoration: none">                
+                            <i class="fas fa-user-plus"></i> 
+                            Register
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <div class="col-5"></div>
+          </div>
+        </div>
+    
+    
+<% include ../partials/footer.ejs %>
