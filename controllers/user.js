@@ -5,7 +5,7 @@ Student ID - 301219863
 Date - 17-02-2022
 */
 
-
+const inventory = require('../models/inventory');
 let User = require('../models/user');
 let passport = require('passport');
 
@@ -110,7 +110,13 @@ module.exports.register = function(req, res, next) {
   };
 
   module.exports.ContactList = function(req, res, next) {
-     res.render('index', { title: 'ContactList' });
+    // inventory.default.find({}, null, { sort: { name: -1 } }, function (err, inventoryList) {
+    //   if (err) {
+    //       return console.error(err);
+    //   }
+      res.render('index', { title: 'ContactList' });
+  // });
+     
    
 }
  
