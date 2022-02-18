@@ -17,11 +17,11 @@
 <body>
   <!-- Main Nav bar -->
   
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark " >
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark table-responsive" >
     <!-- Brand/logo --> 
     <p style="margin-left : 20px;">
         <a class="navbar-brand" href="#">
-            <p style="margin-right: 250px; margin-top: 2px; margin-bottom: 2px;" >
+            <p style="margin-right: 150px; margin-top: 2px; margin-bottom: 2px;" >
                 <img src="/images/pm6.png" alt="logo" style="width: 50px;" ></p>
         </a>
     
@@ -78,6 +78,34 @@
                 <i class="far fa-address-book"></i> Contact  </a>
             </a>
         </li>
+        
+        
+          <li class="nav-item">  
+            <% if (typeof userName == 'string' && userName) { %>
+              <a class="nav-link" href="/users/logout" onclick="return confirm('Sure ?')"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout </a>
+            <% } else { %>
+                <% if (title == "Login") { %>
+              <a class="nav-link active" href="/users/login">
+                <%} else { %> 
+                    <a class="nav-link" href="/users/login">
+                        <% } %>
+                  <i class="fa fa-sign-in" aria-hidden="true"></i> login  </a>
+            </a>
+            <% } %>            
+            
+          </li> 
+      
+        <li class="nav-item"> 
+            <% if (title == "Contact List") { %>
+                <a class="nav-link active" href="/users/login">
+            <%} else { %>
+                <a class="nav-link" href="/users/login">
+            <% } %>
+            <i class="fa fa-th-list fa-1x"></i> Contact List  </a>
+            </a>
+        </li>
+
+        
 
         
       
