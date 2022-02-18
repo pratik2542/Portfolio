@@ -1,3 +1,10 @@
+/*
+File Name - local.js
+Student Name - Pratiksinh Makwana
+Student ID - 301219863
+Date - 17-02-2022
+*/
+
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const User = require('../models/user');

@@ -1,3 +1,11 @@
+/*
+File Name - inventory.js
+Student Name - Pratiksinh Makwana
+Student ID - 301219863
+Date - 17-02-2022
+*/
+
+
 let User = require('../models/user');
 let passport = require('passport');
 
