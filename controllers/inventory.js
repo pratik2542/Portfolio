@@ -12,17 +12,6 @@ const inventory = require('../models/inventory');
 const { db } = require('../models/inventory');
 let Inventory = require('../models/inventory');
 
-const connectionToMongoDB = async () =>{
-    await mongo().then(async (mongoose) => {
-        try{
-            const results = await inventory.find({}).sort({name: -1})
-            alert(results)
-        }
-        finally{
-            
-        }
-    });
-}
 
 exports.list = function(req, res, next){
     Inventory.find((err, inventoryList)=>{
@@ -40,16 +29,15 @@ exports.list = function(req, res, next){
                 { 
                     
                     title: 'Contact List',
-                    InventoryList :  inventoryList.sort((a) =>{
-                        let nameSorting = [a.name].sort();
-                        return nameSorting[0] == a.name ? -1 : 1;
-                    }),
+                    InventoryList :  inventoryList.sort((a, b) => a.name.localeCompare(b.name)),
+                    
                     userName: req.user ? req.user.username : '' 
                 }
             );
         }
     });
 }
+
 
 exports.displayAddPage = (req, res, next) => {
     
